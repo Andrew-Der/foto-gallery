@@ -1,3 +1,14 @@
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+const title = 'React with Webpack and Babel';
+
+ReactDOM.render(
+  <div>{title}</div>,
+  document.getElementById('app')
+);
+
+
 var calculateMonthlyPayment = (principal, years, rate) => {
     let monthlyRate = 0
     if (rate) {
