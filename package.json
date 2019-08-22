@@ -2,20 +2,31 @@
   "name": "foto-gallery",
   "version": "1.0.0",
   "description": "Custom npm app with webpack and babel",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
-    "start": "http-server"
+    "babel": "babel --presets es2015 src/index.js -o build/main.bundle.js",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "webpack": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-preset-es2015": "^6.24.1",
     "http-server": "^0.11.1",
-    "webpack": "^4.39.2"
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   }
 }
