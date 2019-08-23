@@ -52,11 +52,23 @@ module.exports = {
         ]
       },
       {
-      	//load images
+      	/* save images as files per spec */
         test: /\.(png|jpg|gif|jpeg)$/,
         use: [
           {
             loader: 'file-loader'
+          }
+        ]
+      },
+      {
+        /* save svg as files if larger than 1mb */
+        test: /\.(svg)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 1000000
+            }
           }
         ]
       }

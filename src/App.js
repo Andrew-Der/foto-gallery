@@ -7,6 +7,7 @@ const App = title => {
 	<div>
 		{title}
 		<img src={image} alt="kitty" />
+		<img src={BakerIcon} />
 	</div>)
 }
 
