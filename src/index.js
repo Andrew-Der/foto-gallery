@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import "./main.css";
 import App from './App'
 
-const title = 'React WHAT with Webpack and Babel SHOOT';
+
+const title = "title"
 
 ReactDOM.render(
   App(title),

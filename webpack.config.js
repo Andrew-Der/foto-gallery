@@ -1,4 +1,5 @@
 const path = require('path');
+/* used for hot reloading module (hrm) */
 const webpack = require('webpack');
 /* used to bundle css files into single file */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -13,14 +14,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.[hash:5].js' //bc now html doesn't know about it. can't source it
-    //filename: 'bundle.js'
   },
   //hot reloading for changes
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
   	new HtmlWebpackPlugin({
-      title: 'Hello Webpack bundled JavaScript Project',
       template: './src/index.html'
     }),
     new MiniCssExtractPlugin({
@@ -44,7 +43,10 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
 	        {
-	        	loader: MiniCssExtractPlugin.loader
+	        	loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: true
+            }
 	        },
 	        'css-loader', 'sass-loader'
         ]
