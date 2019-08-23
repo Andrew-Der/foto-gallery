@@ -1,36 +1,33 @@
 const path = require('path');
-/* used for hot reloading module (hrm) */
 const webpack = require('webpack');
-/* used to bundle css files into single file */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-/* used to create dist/.html pages that include js and css hash files */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-/* used to wipe dist/ every build */
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  /* one main entry point for js */
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.[hash:5].js' //bc now html doesn't know about it. can't source it
+    filename: 'bundle.[hash:5].js'
   },
-  //hot reloading for changes
   plugins: [
+    /* used for hot reloading module (hrm) in dev*/
     new webpack.HotModuleReplacementPlugin(),
+    /* used to wipe dist/ every build */
     new CleanWebpackPlugin(),
+    /* used to create dist/.html pages that include js and css hash files*/
   	new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
+    /* used to bundle css files into single file */
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // all options are optional
       filename: 'style.[hash:5].css',
-      //chunkFilename: '[id].css',
     })
   ],
   module: {
-  	//loaders
+  	/* loaders to compile non js languages */
     rules: [
       {
       	//babel transpiler loader
@@ -39,7 +36,7 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-      	//sass-loader
+      	//css and sass-loader
         test: /\.(css|scss)$/,
         use: [
 	        {
@@ -77,7 +74,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
-  //use webpack to serve 
+  /* use webpack to for webserver */ 
   devServer: {
   	contentBase: './dist',
   	hot: true
