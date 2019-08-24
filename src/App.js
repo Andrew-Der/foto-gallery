@@ -19,10 +19,10 @@ const inputArray = [
         url: large,
         caption: '3rd kitten'
     },
-    // {
-    //     url: kitten,
-    //     caption: '4th kitten'
-    // }
+    {
+        url: kitten,
+        caption: '4th kitten'
+    }
 ]
 
 const App = () => {
