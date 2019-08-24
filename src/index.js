@@ -1,22 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./main.css";
 import App from './App'
 
-
-const inputArray = [
-    {
-        url: 'http://www.cutestpaw.com/images/picture-of-a-silly-kitty/',
-        caption: 'This is a kitten'
-    },
-    {
-        url: 'http://www.cutestpaw.com/images/smiling-cat-picture/',
-        caption: 'Second kitten'
-    }
-]
-
 ReactDOM.render(
-  App(inputArray),
+  App(),
   document.getElementById('app')
 );
 module.hot.accept();
