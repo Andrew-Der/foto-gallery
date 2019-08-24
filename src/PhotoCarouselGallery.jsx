@@ -4,7 +4,7 @@ import PhotoCarousel from './PhotoCarousel'
 import PhotoGallery from './PhotoGallery'
 
 /* PhotoCarouselGallery component
-input  : [ {url: , caption: }, ... ]
+input  : [ {url: <string>, caption: <string>}, ... ]
 output : displays carousel and beneath a gallery of images
 */
 export default function PhotoCarouselGallery (props) {
@@ -19,5 +19,4 @@ export default function PhotoCarouselGallery (props) {
 		<PhotoGallery input={photos} index={index} setIndex={setIndex} />
 		</div>
 	)
-
 }
