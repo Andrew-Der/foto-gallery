@@ -29,7 +29,7 @@ export default function PhotoCarousel (props) {
 				activeIndex={index} 
 				direction={direction} 
 				onSelect={handleSelect}
-				className="carousel-width margin-auto">
+				className="m-auto carousel-width">
 			{
 				/* create array of items : img & caption
 				same height for all images */
