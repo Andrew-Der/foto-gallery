@@ -24,8 +24,8 @@ export default function PhotoCarousel (props) {
 		<Carousel style={{
 			"width" : "80%",
 			"minWidth" : "700px",
-			"margin" :"auto"}
-		}
+			"margin" :"auto"}}
+		touch={true}
 		activeIndex={index} direction={direction} onSelect={handleSelect}>
 		{
 			input.map((curr, index, arr) => {
