@@ -21,12 +21,18 @@ export default function PhotoCarousel (props) {
 		//active index
 		//the hidden is equal to the state
 		// and on click, it toggles the state
+		<div>
+		{ input.length === 0 ?
+		<h3 className="text-center">Please provide a list of photos and captions to display!</h3>
+ 		:
 		<Carousel style={{
 			"width" : "80%",
 			"minWidth" : "700px",
 			"margin" :"auto"}}
 		touch={true}
-		activeIndex={index} direction={direction} onSelect={handleSelect}>
+		activeIndex={index} 
+		direction={direction} 
+		onSelect={handleSelect}>
 		{
 			input.map((curr, index, arr) => {
 				return (
@@ -43,8 +49,9 @@ export default function PhotoCarousel (props) {
 				)
 			})
 		}
-		</Carousel>
-
+		</Carousel> 
+		}
+		</div>
 	)
 
 }
