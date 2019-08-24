@@ -6,6 +6,7 @@ import kitten from './assets/images/kitten.png'
 import baker from './assets/svg/baker.svg'
 import large from './assets/svg/large.svg'
 
+
 const inputArray = [
     {
         url: kitten,
@@ -40,6 +41,7 @@ const inputArray = [
         caption: 'Yes, I think last kitten'
     }
 ]
+
 
 const App = () => {
 	console.log("HERE")

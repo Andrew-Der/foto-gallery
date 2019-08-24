@@ -19,10 +19,9 @@ export default function PhotoGallery (props) {
 			for( let j = 0; j < 6 && i < input.length; j++, i++) {
 				const currIndex = i
 				const greyscale = i === index ? "50%" : 1;
-				console.log(greyscale)
 
 				newRow.push(
-					<Col key={j} sm={6} md={4} lg={2}>
+					<Col key={j} xs={6} md={4} lg={2}>
 						<img 
 							style={{
 								"filter" : "brightness("+greyscale+")"
@@ -35,12 +34,13 @@ export default function PhotoGallery (props) {
 						/>
 					</Col>)
 			}
-			gallery.push(<Row key={i} className="no-gutters">{newRow}</Row>)
+			gallery.push(<Row style={{
+				"marginBottom" : "15px"
+			}}key={i}>{newRow}</Row>)
 		}
 		return (
 			<Container>{gallery}</Container>)
 	}
-
 
 	return (
 		<div>

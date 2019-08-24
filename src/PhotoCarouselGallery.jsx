@@ -11,10 +11,8 @@ export default function PhotoCarouselGallery (props) {
 	return (
 		<div>
 		<PhotoCarousel input={input} index={index} setIndex={setIndex} />
-		
-		<button onClick={() => setIndex(2)}/>
+		<br/>
 		<PhotoGallery input={input} index={index} setIndex={setIndex} />
-
 		</div>
 	)
 
