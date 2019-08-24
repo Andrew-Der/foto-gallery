@@ -4,10 +4,19 @@ import "./main.css";
 import App from './App'
 
 
-const title = "title"
+const inputArray = [
+    {
+        url: 'http://www.cutestpaw.com/images/picture-of-a-silly-kitty/',
+        caption: 'This is a kitten'
+    },
+    {
+        url: 'http://www.cutestpaw.com/images/smiling-cat-picture/',
+        caption: 'Second kitten'
+    }
+]
 
 ReactDOM.render(
-  App(title),
+  App(inputArray),
   document.getElementById('app')
 );
 module.hot.accept();
