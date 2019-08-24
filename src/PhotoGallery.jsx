@@ -34,9 +34,9 @@ export default function PhotoGallery (props) {
 						/>
 					</Col>)
 			}
-			gallery.push(<Row style={{
-				"marginBottom" : "15px"
-			}}key={i}>{newRow}</Row>)
+			gallery.push(<Row 
+				className="row-margin-bottom"
+				key={i}>{newRow}</Row>)
 		}
 		return (
 			<Container>{gallery}</Container>)

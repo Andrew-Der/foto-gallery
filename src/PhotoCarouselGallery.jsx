@@ -3,16 +3,20 @@ import React, {useState} from 'react'
 import PhotoCarousel from './PhotoCarousel'
 import PhotoGallery from './PhotoGallery'
 
+/* PhotoCarouselGallery component
+input  : [ {url: , caption: }, ... ]
+output : displays carousel and beneath a gallery of images
+*/
 export default function PhotoCarouselGallery (props) {
 
-	const {input} = props
+	const {photos} = props
 	const [index, setIndex] = useState(0)
-	//const [photos, setPhotos] = useState(input)
+
 	return (
 		<div>
-		<PhotoCarousel input={input} index={index} setIndex={setIndex} />
+		<PhotoCarousel input={photos} index={index} setIndex={setIndex} />
 		<br/>
-		<PhotoGallery input={input} index={index} setIndex={setIndex} />
+		<PhotoGallery input={photos} index={index} setIndex={setIndex} />
 		</div>
 	)
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 
-
 export default function PhotoCarousel (props) {
 
 	const { input } = props
@@ -25,14 +24,13 @@ export default function PhotoCarousel (props) {
 		{ input.length === 0 ?
 		<h3 className="text-center">Please provide a list of photos and captions to display!</h3>
  		:
-		<Carousel style={{
-			"width" : "80%",
-			"minWidth" : "700px",
-			"margin" :"auto"}}
+		<Carousel 
 		touch={true}
 		activeIndex={index} 
 		direction={direction} 
-		onSelect={handleSelect}>
+		onSelect={handleSelect}
+		className="carousel-width margin-auto"
+		>
 		{
 			input.map((curr, index, arr) => {
 				return (

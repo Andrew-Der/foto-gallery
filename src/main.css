@@ -1,3 +1,14 @@
 body {
 	background: lightblue;
 }
+
+.carousel-width {
+	width : 80%;
+	min-width : 700px;
+}
+
+.row-margin-bottom {
+	margin-bottom : 15px;
+}
+
+
