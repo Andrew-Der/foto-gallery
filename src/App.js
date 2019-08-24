@@ -22,6 +22,22 @@ const inputArray = [
     {
         url: kitten,
         caption: '4th kitten'
+    },
+    {
+        url: kitten,
+        caption: '5th kitten'
+    },
+    {
+        url: baker,
+        caption: '6th kitten'
+    },
+    {
+        url: large,
+        caption: 'More really?'
+    },
+    {
+        url: kitten,
+        caption: 'Yes, I think last kitten'
     }
 ]
 
