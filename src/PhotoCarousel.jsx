@@ -35,10 +35,11 @@ export default function PhotoCarousel (props) {
 				same height for all images */
 				input.map((curr, index, arr) => {
 					return (
-						<Carousel.Item key={index} onClick={() => setCaptionHidden(!captionHidden)}>
+						<Carousel.Item className="slate-background" key={index} 
+							onClick={() => setCaptionHidden(!captionHidden)}>
 							<img
 								height="500px"
-								className="d-block w-100"
+								className="d-block m-auto"
 								src={curr.url}
 							/>
 							<Carousel.Caption hidden={captionHidden}>

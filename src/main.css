@@ -7,10 +7,10 @@ body {
 	min-width : 700px;
 }
 
-/*.row-max-height {
-	max-height: 150px;
+.slate-background {
+	background-color : lightseagreen;
 }
-*/
+
 .row-margin-bottom {
 	margin-bottom : 15px;
 }
