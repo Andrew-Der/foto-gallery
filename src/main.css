@@ -7,8 +7,19 @@ body {
 	min-width : 700px;
 }
 
+/*.row-max-height {
+	max-height: 150px;
+}
+*/
 .row-margin-bottom {
-	margin-bottom : 20px;
+	margin-bottom : 15px;
 }
 
-
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}

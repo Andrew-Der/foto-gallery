@@ -30,13 +30,13 @@ module.exports = {
   	/* loaders to compile non js languages */
     rules: [
       {
-      	//babel transpiler loader
+      	/* babel loader to transpile down JS */
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
       {
-      	//css and sass-loader
+      	/* css and sass-loader for building seperate css file */
         test: /\.(css|scss)$/,
         use: [
 	        {

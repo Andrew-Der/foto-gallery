@@ -29,7 +29,7 @@ export default function PhotoGallery (props) {
 				const greyscale = i === index ? "50%" : 1;
 
 				newRow.push(
-					<Col key={j} xs={6} md={4} lg={2}>
+					<Col key={j} xs={6} md={4} lg={2} className="h-100 row-margin-bottom">
 						<img 
 							style={{
 								"filter" : "brightness("+greyscale+")"
@@ -42,10 +42,13 @@ export default function PhotoGallery (props) {
 						/>
 					</Col>)
 			}
-			gallery.push(<Row className="row-margin-bottom" key={i}>{newRow}</Row>)
+			gallery.push(newRow)
 		}
 		return (
-			<Container>{gallery}</Container>)
+			<Container>
+				<Row className="row-max-height">{gallery}
+				</Row>
+			</Container>)
 	}
 
 	return (

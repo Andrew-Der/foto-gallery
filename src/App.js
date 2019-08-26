@@ -21,9 +21,46 @@ const inputArray = [
         caption: 'More really?'
     },
     {
-        url: kitten,
+        url: 'https://cdn.pixabay.com/photo/2018/04/16/16/16/sunset-3325080__480.jpg',
         caption: 'Yes, I think last kitten'
-    }
+    },
+    {
+        url: 'https://farm8.staticflickr.com/7364/8728177885_86642c8724_b.jpg',
+        caption: 'This is a kitten'
+    },
+    {
+        url: "https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/CUR.2004.28.120_top_Heon-Kang_photo_NRICH.jpg",
+        caption: 'Second kitten'
+    },
+    {
+        url: "https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/CUR.2004.28.126_detail1_Heon-Kang_photo_NRICH.jpg",
+        caption: 'More really?'
+    },
+    {
+        url: 'https://farm8.staticflickr.com/7364/8728177885_86642c8724_b.jpg',
+        caption: 'Yes, I think last kitten'
+    },
+    {
+        url: 'https://farm8.staticflickr.com/7364/8728177885_86642c8724_b.jpg',
+        caption: 'Yes, I think last kitten'
+    },
+    {
+        url: 'https://farm8.staticflickr.com/7364/8728177885_86642c8724_b.jpg',
+        caption: 'This is a kitten'
+    },
+    {
+        url: "https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/CUR.2004.28.120_top_Heon-Kang_photo_NRICH.jpg",
+        caption: 'Second kitten'
+    },
+    {
+        url: "https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/CUR.2004.28.126_detail1_Heon-Kang_photo_NRICH.jpg",
+        caption: 'More really?'
+    },
+    {
+        url: 'https://farm8.staticflickr.com/7364/8728177885_86642c8724_b.jpg',
+        caption: 'Yes, I think last kitten'
+    },
+
 ]
 
 const App = () => {
