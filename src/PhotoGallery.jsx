@@ -11,7 +11,6 @@ export default function PhotoGallery (props) {
 
 	const { input } = props
 	const { index, setIndex } = props
-	const photosPerRow = 6
 
 	/* returns 2D array of images for gallery
 	grid is responsive to page,
@@ -21,29 +20,26 @@ export default function PhotoGallery (props) {
 
 		const gallery = []
 		/* loop through all photos */
-		for (let i = 0; i < input.length; ) {
-			const newRow = []
-			/* max is 6 in a row */
-			for( let j = 0; j < photosPerRow && i < input.length; j++, i++) {
-				const currIndex = i
-				const greyscale = i === index ? "50%" : 1;
+		for (let i = 0; i < input.length; i++) {
+			const currIndex = i
+			const greyscale = i === index ? "50%" : 1;
 
-				newRow.push(
-					<Col key={j} xs={6} md={4} lg={2} className="h-100 row-margin-bottom">
-						<img 
-							style={{
-								"filter" : "brightness("+greyscale+")"
-							}}
-							className="w-100 h-100" 
-							src={input[i].url} 
-							onClick={() => {
-								setIndex(currIndex)
-							}}
-						/>
-					</Col>)
-			}
-			gallery.push(newRow)
+			/* array of cols with images */
+			gallery.push(
+				<Col key={i} xs={6} md={4} lg={2} className="h-100 row-margin-bottom">
+					<img 
+						style={{
+							"filter" : "brightness("+greyscale+")"
+						}}
+						className="w-100 h-100" 
+						src={input[i].url} 
+						onClick={() => {
+							setIndex(currIndex)
+						}}
+					/>
+				</Col>)
 		}
+		
 		return (
 			<Container>
 				<Row className="row-max-height">{gallery}
