@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   /* one main entry point for js */
@@ -19,11 +20,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     /* used to create dist/.html pages that include js and css hash files*/
   	new HtmlWebpackPlugin({
+      hash: true,
       template: './src/index.html'
     }),
     /* used to bundle css files into single file */
     new MiniCssExtractPlugin({
-      filename: 'style.[hash:5].css',
+            filename: devMode ? '[name].css' : '[name].[hash:5].css',
     })
   ],
   module: {
@@ -76,7 +78,10 @@ module.exports = {
   },
   /* use webpack to for webserver */ 
   devServer: {
-  	contentBase: './dist',
-  	hot: true
+  	contentBase: './src',
+  	hot: true,
+    inline: true,
+    //contentBase: path.resolve(__dirname, "../src"),
+    watchContentBase: true,
   }
 };
