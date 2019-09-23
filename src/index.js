@@ -2,15 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import "./main.css";
 import App from './App'
-
-
+/*
 const title = "title"
-
 ReactDOM.render(
   App(title),
   document.getElementById('app')
 );
+*/
 module.hot.accept();
+
+
+
+
+
+
 
 
 // var calculateMonthlyPayment = (principal, years, rate) => {
